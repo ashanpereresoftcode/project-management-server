@@ -4,7 +4,7 @@
   "description": "project management system",
   "main": "startup.js",
   "scripts": {
-    "development-start": "cross-env NODE_ENV=dev nodemon startup.js",
+    "start": "cross-env NODE_ENV=dev nodemon startup.js",
     "production-start": "cross-env NODE_ENV=prod nodemon startup.js",
     "docker:build": "docker build -t farm-management-server .",
     "docker:run": "docker run -p 3000:3000 -d farm-management-server",
