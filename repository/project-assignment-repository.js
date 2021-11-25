@@ -131,6 +131,19 @@ exports.updateAssignedProject = async (projectAssignment) => {
     const updateDoc = {
         $set: { ...projectAssignment },
     };
+
+    // const result = await userRepo.getUserDetail(projectAssignment.userId);
+    // if (result && result.length > 0) {
+    //     const user = result[0];
+    //     if (user['assignedProjects'] && user['assignedProjects'].length > 0) {
+    //         const projectIds = user.assignedSkills.filter(x => x._id !== projectAssignment.project).map(i => i._id)
+    //         user.assignedProjects = projectIds;
+    //     }
+    //     await userRepo.updateUser(user);
+    //     console.log('Successfully updated the user.');
+    // } else {
+    //     console.log('Failed to load user .');
+    // }
     return await projectAssignmentModel.updateOne(filter, updateDoc, options);
 }
 

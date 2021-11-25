@@ -7,6 +7,7 @@ const projectAssignmentSchema = mongoose.Schema({
     fromDate: { type: Date },
     toDate: { type: Date },
     comments: { type: String },
+    allocationHours: { type: Number },
     createdBy: { type: String },
     createdOn: { type: Date },
     modifiedBy: { type: String },

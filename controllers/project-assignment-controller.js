@@ -99,6 +99,7 @@ exports.saveAssignedProject = async (req, res) => {
                 fromDate: payload.fromDate,
                 toDate: payload.toDate,
                 comments: payload.comments,
+                allocationHours: payload.allocationHours,
             }
 
             const savedResult = await assignedProjectManager.saveAssignedProject(assignedProject);
@@ -130,6 +131,9 @@ exports.updateAssignedProject = async (req, res) => {
                 userId: payload.userId,
                 projectAllocation: payload.projectAllocation,
                 comments: payload.comments,
+                fromDate: payload.fromDate,
+                toDate: payload.toDate,
+                allocationHours: payload.allocationHours,
                 createdBy: payload.createdBy,
                 createdOn: payload.createdOn,
                 modifiedBy: payload.modifiedBy,
